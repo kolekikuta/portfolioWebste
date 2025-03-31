@@ -8,6 +8,7 @@ import { Modal } from "../utils/Modal";
 import PageTransition from "../utils/PageTransition";
 import Title from "../utils/Title";
 import { FaGithub } from "react-icons/fa";
+import ProjectCard from "./ProjectCard";
 
 export default function HomePage () {
     const [openModalId, setOpenModalID] = useState(null);
@@ -86,7 +87,7 @@ export default function HomePage () {
             {/*Left Aligned*/}
             <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block">
               <h2 className="text-2xl font-bold mb-2">Software Engineer at XYZ Company</h2>
-              <p className="text-md mb-4">June 2021 - Present</p>
+              <p className="text-md font-light italic mb-2">June 2021 - Present</p>
               <ul className="list-disc list-inside text-md text-gray-200">
                 <li>Developed and maintained web applications using React and Node.js.</li>
                 <li>Collaborated with cross-functional teams to design and implement new features.</li>
@@ -114,11 +115,11 @@ export default function HomePage () {
       {/* Portfolio Grid */}
       <section id="portfolio-grid" className="pt-14 w-full max-w-5xl relative">
         <Reveal>
-        <div className="flex justify-center items-center align-middle w-full my-5 bg-secondary text-white p-6 rounded-lg shadow-md cursor-pointer hover-translate-y" onClick={() => openModalByID("Modal1")}>
-          <div className="w-1/2 text-white p-6 rounded-lg">
+        <div className="flex justify-center items-center align-middle w-full my-5 text-white rounded-lg px-6 cursor-pointer hover-translate-y" onClick={() => openModalByID("Modal1")}>
+          <div className="w-1/4 text-white rounded-lg">
             <img src="logo512.png" alt="Project Logo" className="w-full h-auto rounded-lg mb-4 cursor-pointer"/>
           </div>
-          <div className="w-1/2 h-full bg-primary-text text-white p-6 rounded-lg shadow-md ml-4 relative">
+          <div className="w-3/4 h-full bg-primary-text text-white p-6 rounded-lg shadow-md ml-4 relative">
             <h2 className="text-2xl font-bold mb-2">Project 1</h2>
             <p>Descripton of project</p>
             <a href="https://github.com/kolekikuta" target="_blank" rel="noopener noreferrer" className="absolute top-6 right-6 text-white hover:text-secondary transition-colors duration-300">
@@ -138,15 +139,15 @@ export default function HomePage () {
           <p>This is where you can add more details about the project, such as features, technologies used, challenges faced, etc.</p>
         </Modal>
         <Reveal>
-        <div className="flex justify-center items-center align-middle w-full my-5 bg-secondary text-white p-6 rounded-lg shadow-md">
-          <div className="w-1/2 text-white p-6 rounded-lg">
-            <img src="logo512.png" alt="Project Logo" className="w-full h-auto rounded-lg mb-4 cursor-pointer" onClick={() => handleNavigation('/porjectName')}/>
-          </div>
-          <div className="w-1/2 h-full bg-primary-text text-white p-6 rounded-lg shadow-md ml-4">
-            <h2 className="text-2xl font-bold">Project 1</h2>
-            <p>Descripton of project</p>
-          </div>
-        </div>
+          <ProjectCard
+            title="Project Title"
+            description="Description of the project goes here."
+            imgPath="logo512.png"
+            imgAlt="Project Logo"
+            skills={["React", "Node.js", "Express"]}
+            ghLink="https://github.com/kolekikuta"
+            projectPage='/project'
+          />
         </Reveal>
       </section>
       </div>

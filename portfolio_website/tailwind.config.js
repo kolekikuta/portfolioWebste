@@ -45,7 +45,6 @@ module.exports = {
         '.hover-translate-y:hover': {
           transform: 'translateY(-10px)',
           transition: 'transform 0.2s ease-out',
-          boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05)',
         },
       });
     },
