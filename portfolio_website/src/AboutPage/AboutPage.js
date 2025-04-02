@@ -17,7 +17,7 @@ export default function AboutPage () {
           <motion.div
             initial={{ opacity: 0, y: -20, ease: "easeInOut" }}
             animate={{ opacity: 1, y: 0, ease: "easeInOut" }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             >
               <img src="\portrait.jpg" alt="Kole Kikuta" className="w-96 h-auto rounded-xl mb-4" />
           </motion.div>
@@ -29,7 +29,7 @@ export default function AboutPage () {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="overflow-hidden"
             >
-              <p className="mt-4 text-xl text-gray-600">I am a Software Engineer specializing in full-stack development.</p>
+              <p className="text-xl text-gray-600">I am a Software Engineer specializing in full-stack development.</p>
             </motion.div>
             <motion.div
               initial={{ x: "-50vw", ease: "easeInOut" }}

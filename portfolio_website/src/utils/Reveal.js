@@ -1,7 +1,8 @@
 import React, {useEffect, useRef} from  "react";
 import { motion, useInView, useAnimation } from 'framer-motion';
 
-export const Reveal = ({ children }) => {
+
+const Reveal = ({ children }) => {
   const controls = useAnimation();
   const ref =  useRef(null);
   const inView = useInView(ref, { once: true });
@@ -31,3 +32,4 @@ export const Reveal = ({ children }) => {
 
   );
 }
+export default Reveal;

@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import './HomePage.css';
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 import { motion, AnimatePresence, animate } from 'framer-motion';
-import { Reveal } from "../utils/Reveal";
+import Reveal from "../utils/Reveal";
 import { Modal } from "../utils/Modal";
 import PageTransition from "../utils/PageTransition";
 import Title from "../utils/Title";
@@ -28,7 +27,7 @@ export default function HomePage () {
       const startPosition = window.scrollY;
 
       animate(startPosition, targetPosition, {
-        duration: 1.5, // Adjust duration in seconds
+        duration: 1, // Adjust duration in seconds
         ease: "easeInOut",
         onUpdate: (value) => window.scrollTo(0, value),
       });
@@ -83,29 +82,39 @@ export default function HomePage () {
       <section id="experience-section" className="text-center w-full pt-14">
         <Reveal>
           <h1 className="mt-4">Experience</h1>
-          <div className="max-w-4xl w-full mx-auto text-white bg-secondary">
+          <div className="max-w-4xl w-full mx-auto text-white">
             {/*Left Aligned*/}
-            <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block">
-              <h2 className="text-2xl font-bold mb-2">Software Engineer at XYZ Company</h2>
-              <p className="text-md font-light italic mb-2">June 2021 - Present</p>
+            <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block mb-4">
+              <h2 className="text-2xl font-bold mb-1">Systems Support Engineer at Genius Sports</h2>
+              <p className="text-md font-light italic mb-2">August 2024 - February 2025</p>
               <ul className="list-disc list-inside text-md text-gray-200">
-                <li>Developed and maintained web applications using React and Node.js.</li>
-                <li>Collaborated with cross-functional teams to design and implement new features.</li>
-                <li>Optimized application performance, resulting in a 20% reduction in load time.</li>
+                <li>Supported cross-functional teams in identifying system improvements and resolving technical issues across a broad tech stack</li>
+                <li>Managed systems administration and real-time troubleshooting of hardware/software systems using Grafana custom alerts/dashboards with PromQL</li>
+                <li>Troubleshooted issues in AWS EC2 and S3 cloud computing environments</li>
               </ul>
             </div>
 
             {/*Right Aligned*/}
-            <div className="max-w-xl w-full flex justify-end block">
-              <div className="bg-secondary text-white p-6 rounded-lg shadow-md text-left">
-                <h2 className="text-2xl font-bold mb-2">Software Engineer at XYZ Company</h2>
-                <p className="text-md mb-4">June 2021 - Present</p>
+            <div className="w-full flex justify-end">
+              <div className="max-w-xl text-white p-6 rounded-lg shadow-md text-left bg-secondary mb-4">
+                <h2 className="text-2xl font-bold mb-2">Web Development Intern at Terasaki Budokan</h2>
+                <p className="text-md mb-4">June 2024 - September 2024</p>
                 <ul className="list-disc list-inside text-md text-gray-200 text-start">
-                  <li>Developed and maintained web applications using React and Node.js.</li>
-                  <li>Collaborated with cross-functional teams to design and implement new features.</li>
-                  <li>Optimized application performance, resulting in a 20% reduction in load time.</li>
+                  <li>Responsible for website rebuild for elevated user experience and increased engagement using front-end programming languages, including HTML and CSS</li>
+                  <li>Collaborated with management and user test groups to identify UI/UX improvements that resulted in a 500% increase in web traffic</li>
                 </ul>
               </div>
+            </div>
+
+            {/*Left Aligned*/}
+            <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block mb-4">
+              <h2 className="text-2xl font-bold mb-1">Information Technology Intern at UCSB Kavli Institute for Theoretical Physics</h2>
+              <p className="text-md font-light italic mb-2">October 2022 - Present</p>
+              <ul className="list-disc list-inside text-md text-gray-200">
+                <li>Responsible for installing, maintaining, and repairing hardware and software components of network, server, and computer systems</li>
+                <li>Responsible for troubleshooting and resolving computer, network, and printing issues for staff of 40+ members</li>
+                <li>Operated Audio-Visual systems for internationally broadcasted conventions and discussions</li>
+              </ul>
             </div>
 
           </div>
