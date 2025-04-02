@@ -8,6 +8,7 @@ import PageTransition from "../utils/PageTransition";
 import Title from "../utils/Title";
 import { FaGithub } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
+import ExperienceCard from "./ExperienceCard";
 
 export default function HomePage () {
     const [openModalId, setOpenModalID] = useState(null);
@@ -82,22 +83,63 @@ export default function HomePage () {
       <section id="experience-section" className="text-center w-full pt-14">
         <Reveal>
           <h1 className="mt-4">Experience</h1>
-          <div className="max-w-4xl w-full mx-auto text-white">
+          <div className="w-full mx-auto text-white">
+
+            <ExperienceCard
+              title="Systems Support Engineer at Genius Sports"
+              period="August 2024 - February 2025"
+              description={[
+                "Supported cross-functional teams in identifying system improvements and resolving technical issues across a broad tech stack",
+                "Managed systems administration and real-time troubleshooting of hardware/software systems using Grafana custom alerts/dashboards with PromQL",
+                "Troubleshooted issues in AWS EC2 and S3 cloud computing environments"
+              ]}
+              />
+
+
             {/*Left Aligned*/}
-            <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block mb-4">
-              <h2 className="text-2xl font-bold mb-1">Systems Support Engineer at Genius Sports</h2>
-              <p className="text-md font-light italic mb-2">August 2024 - February 2025</p>
-              <ul className="list-disc list-inside text-md text-gray-200">
+            <div className="w-full justify-start p-6 text-start block mb-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold mb-1">Systems Support Engineer at Genius Sports</h2>
+                <p className="text-md font-light italic mb-2">August 2024 - February 2025</p>
+              </div>
+              <ul className="list-disc list-inside text-md text-gray-200 font-light">
                 <li>Supported cross-functional teams in identifying system improvements and resolving technical issues across a broad tech stack</li>
                 <li>Managed systems administration and real-time troubleshooting of hardware/software systems using Grafana custom alerts/dashboards with PromQL</li>
                 <li>Troubleshooted issues in AWS EC2 and S3 cloud computing environments</li>
               </ul>
             </div>
+            <hr className="my-4 border-t border-gray-700" />
+
+            <div className="w-full justify-start p-6 text-start block mb-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold mb-1">Web Development Intern at Terasaki Budokan</h2>
+                <p className="text-md font-light italic mb-2">August 2024 - February 2025</p>
+              </div>
+              <ul className="list-disc list-inside text-md text-gray-200 font-light">
+                <li>Supported cross-functional teams in identifying system improvements and resolving technical issues across a broad tech stack</li>
+                <li>Managed systems administration and real-time troubleshooting of hardware/software systems using Grafana custom alerts/dashboards with PromQL</li>
+                <li>Troubleshooted issues in AWS EC2 and S3 cloud computing environments</li>
+              </ul>
+            </div>
+            <hr className="my-4 border-t border-gray-700" />
+
+            <div className="w-full justify-start p-6 text-start block mb-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold mb-1">Systems Support Engineer at Genius Sports</h2>
+                <p className="text-md font-light italic mb-2">August 2024 - February 2025</p>
+              </div>
+              <ul className="list-disc list-inside text-md text-gray-200 font-light">
+                <li>Supported cross-functional teams in identifying system improvements and resolving technical issues across a broad tech stack</li>
+                <li>Managed systems administration and real-time troubleshooting of hardware/software systems using Grafana custom alerts/dashboards with PromQL</li>
+                <li>Troubleshooted issues in AWS EC2 and S3 cloud computing environments</li>
+              </ul>
+            </div>
+            <hr className="my-4 border-t border-gray-700" />
 
             {/*Right Aligned*/}
             <div className="w-full flex justify-end">
               <div className="max-w-xl text-white p-6 rounded-lg shadow-md text-left bg-secondary mb-4">
-                <h2 className="text-2xl font-bold mb-2">Web Development Intern at Terasaki Budokan</h2>
+                <h2 className="text-2xl font-bold mb-2"></h2>
                 <p className="text-md mb-4">June 2024 - September 2024</p>
                 <ul className="list-disc list-inside text-md text-gray-200 text-start">
                   <li>Responsible for website rebuild for elevated user experience and increased engagement using front-end programming languages, including HTML and CSS</li>
