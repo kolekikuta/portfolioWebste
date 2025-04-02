@@ -12,19 +12,14 @@ const ScrollButton = () => {
 
     const updateScroll = () => {
       const scrollY = window.scrollY;
-      const heroTop = hero.offsetTop; // Hero section start
-      const heroHeight = hero.offsetHeight; // Hero section end
+      const heroTop = hero.offsetTop; // Start of hero section
+      const heroHeight = hero.offsetHeight; // End of hero section
 
-      // Constrain scrolling to only within Hero section
-      const scrollProgress = Math.min(
-        scrollY  / heroHeight,
-        1
-      );
+      // Calculate scroll progress within the hero section
+      const progress = Math.min(Math.max((scrollY - heroTop) / heroHeight, 0), 1);
 
-      setRotation(scrollProgress * 180); // Rotate up to 180° based on scroll
-
-      // Update the `isUp` state based on the scroll position
-      setIsUp(scrollY > 0);
+      setRotation(progress * 180); // Rotate up to 180° based on scroll
+      setIsUp(progress > 0.5); // Consider "up" if past halfway
     };
 
     window.addEventListener("scroll", updateScroll);
@@ -32,21 +27,22 @@ const ScrollButton = () => {
   }, []);
 
   const handleClick = () => {
-    const target = document.getElementById("hero-section");
-    if (!target) return;
+    const hero = document.getElementById("hero-section");
+    if (!hero) return;
 
-    let targetPosition;
-    if (isUp) {
-        targetPosition = target.getBoundingClientRect().top;
-    } else {
-        targetPosition = target.getBoundingClientRect().bottom + 1;
-    }
-        const startPosition = window.scrollY;
-        animate(startPosition, targetPosition, {
-          duration: 1,
-          ease: "easeInOut",
-          onUpdate: (value) => window.scrollTo(0, value),
-        });
+    const targetPosition = isUp ? hero.offsetTop : hero.offsetTop + hero.offsetHeight;
+    const startPosition = window.scrollY;
+
+    animate(startPosition, targetPosition, {
+      duration: 1,
+      ease: "easeInOut",
+      onUpdate: (value) => {
+        window.scrollTo(0, value);
+        // Animate rotation alongside scrolling for smoother transition
+        const progress = Math.min(Math.max((value - hero.offsetTop) / hero.offsetHeight, 0), 1);
+        setRotation(progress * 180);
+      },
+    });
   };
 
   return (
@@ -54,12 +50,8 @@ const ScrollButton = () => {
       className="fixed bottom-4 right-4 p-3 text-white"
       onClick={handleClick}
     >
-      <motion.div
-        animate={{ rotate: rotation }}
-      >
-        <ChevronDownIcon
-          className={`h-10 w-10 transform`}
-        />
+      <motion.div animate={{ rotate: rotation }}>
+        <ChevronDownIcon className="h-10 w-10 transform" />
       </motion.div>
     </motion.button>
   );
