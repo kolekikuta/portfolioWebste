@@ -7,5 +7,9 @@ h1 {
 }
 
 h2 {
-    @apply text-2xl font-bold mb-2 text-white
+  @apply text-6xl font-bold text-gray-900 mb-4
+}
+
+h3 {
+    @apply text-2xl font-bold text-white
 }
