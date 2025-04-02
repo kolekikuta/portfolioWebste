@@ -82,7 +82,7 @@ export default function HomePage () {
       <section id="experience-section" className="text-center w-full pt-14">
         <Reveal>
           <h1 className="mt-4">Experience</h1>
-          <div className="max-w-4xl w-full mx-auto text-white">
+          <div className=" w-full mx-auto text-white">
             {/*Left Aligned*/}
             <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block mb-4">
               <h2 className="text-2xl font-bold mb-1">Systems Support Engineer at Genius Sports</h2>

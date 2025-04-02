@@ -24,7 +24,7 @@ export default function AboutPage () {
           <div className="overflow-hidden p-10 text-left">
             <Title h1="About Me" p=""/>
             <motion.div
-              initial={{ x: "-50vw", ease: "easeInOut" }}
+              initial={{ x: "-100vw", ease: "easeInOut" }}
               animate={{ x: 0, ease: "easeInOut" }}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="overflow-hidden"
@@ -32,7 +32,7 @@ export default function AboutPage () {
               <p className="text-xl text-gray-600">I am a Software Engineer specializing in full-stack development.</p>
             </motion.div>
             <motion.div
-              initial={{ x: "-50vw", ease: "easeInOut" }}
+              initial={{ x: "-100vw", ease: "easeInOut" }}
               animate={{ x: 0, ease: "easeInOut" }}
               transition={{ duration: 0.5, delay: 0.6 }}
               className="overflow-hidden"
