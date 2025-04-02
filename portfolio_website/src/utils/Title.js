@@ -21,7 +21,7 @@ const Title = ({h1, p}) => {
             exit={{}}
             transition={{ duration: 0.7, ease: "easeInOut" }}
             >
-                <hr className="w-24 border-2 border-secondary my-6"/>
+                <hr className="w-24 border-2 border-secondary my-4"/>
         </motion.div>
         <motion.div
             initial={{ opacity: 0, y: 50 }}

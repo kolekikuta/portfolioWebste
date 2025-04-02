@@ -5,10 +5,12 @@ import HomePage from "./HomePage/HomePage";
 import AboutPage from "./AboutPage/AboutPage";
 import ProjectsPage from "./ProjectsPage/ProjectsPage";
 import PageTransition from "./utils/PageTransition";
+import { useLenis } from "./utils/Lenis"
 import './global.css'
 
 function AnimatedRoutes() {
   const location = useLocation();
+  useLenis();
 
   return (
     <AnimatePresence mode="wait">

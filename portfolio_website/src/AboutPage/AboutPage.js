@@ -15,9 +15,9 @@ export default function AboutPage () {
         {/* Hero Section */}
         <section className="text-center h-screen w-full pt-14 flex justify-center items-center align-middle">
           <motion.div
-            initial={{ opacity: 0, y: -20, ease: "easeInOut" }}
-            animate={{ opacity: 1, y: 0, ease: "easeInOut" }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20, scale: .8, ease: "easeInOut" }}
+            animate={{ opacity: 1, y: 0, scale: 1, ease: "easeInOut" }}
+            transition={{ duration: 1 }}
             >
               <img src="\portrait.jpg" alt="Kole Kikuta" className="w-96 h-auto rounded-xl mb-4" />
           </motion.div>
