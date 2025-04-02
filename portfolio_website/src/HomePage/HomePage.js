@@ -73,7 +73,7 @@ export default function HomePage () {
           className="mt-6 text-white transition"
         >
           <span>
-            <ChevronDownIcon className="h-10 w-10 inline-block color-white" />
+            <ChevronDownIcon className="h-10 w-10 inline-block color-white transform transition hover:scale-125 duration-500" />
           </span>
         </button>
         </Reveal>
@@ -143,7 +143,7 @@ export default function HomePage () {
           className="fixed bottom-4 right-4 text-white p-3"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <ChevronUpIcon className="h-10 w-10" />
+            <ChevronUpIcon className="h-10 w-10 transform transition hover:scale-125 duration-500" />
         </motion.button>
       )}
       </AnimatePresence>
