@@ -9,8 +9,8 @@ export default function AboutPage () {
   }, []);
 
   return (
-    <div className="bg-primary text-black font-sans min-h-screen flex flex-col items-center">
-        <div className="bg-primary text-black font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
+    <div className="bg-custom-gradient font-sans min-h-screen flex flex-col items-center">
+        <div className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
 
         {/* Hero Section */}
         <section className="text-center h-screen w-full pt-14 flex justify-center items-center align-middle">
@@ -29,7 +29,7 @@ export default function AboutPage () {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="overflow-hidden"
             >
-              <p className="text-xl text-gray-600">I am a Software Engineer specializing in full-stack development.</p>
+              <p className="text-xl">I am a Software Engineer specializing in full-stack development.</p>
             </motion.div>
             <motion.div
               initial={{ x: "-50vw", ease: "easeInOut" }}
@@ -37,7 +37,7 @@ export default function AboutPage () {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="overflow-hidden"
             >
-              <p className="mt-2 text-md text-gray-600">I enjoy building applications that solve real-world problems and enhance user experiences.</p>
+              <p className="mt-2 text-md">I enjoy building applications that solve real-world problems and enhance user experiences.</p>
             </motion.div>
           </div>
         </section>

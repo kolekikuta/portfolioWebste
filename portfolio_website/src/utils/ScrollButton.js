@@ -51,7 +51,7 @@ const ScrollButton = () => {
       onClick={handleClick}
     >
       <motion.div animate={{ rotate: rotation }}>
-        <ChevronDownIcon className="h-10 w-10 transform" />
+        <ChevronDownIcon className="h-10 w-10 transform hover:scale-125 transition transform duration-500" />
       </motion.div>
     </motion.button>
   );

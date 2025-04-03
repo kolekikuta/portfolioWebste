@@ -21,3 +21,7 @@ p {
 li {
   @apply text-primary-text
 }
+
+hr {
+  @apply border-secondary
+}

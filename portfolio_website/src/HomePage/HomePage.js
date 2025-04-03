@@ -64,12 +64,12 @@ export default function HomePage () {
     }, []);
 
   return (
-    <div className="bg-primary text-black font-sans min-h-screen flex flex-col items-center">
+    <div className="bg-custom-gradient text-black font-sans min-h-screen flex flex-col items-center">
       {/* Hero Section */}
       <section id="hero-section" className="text-center flex flex-col h-screen w-full pt-14 justify-center items-center align-middle">
       <Title h1="Hi, my name is Kole" p="I am a software engineer from Long Beach, California specializing in full-stack development."/>
       </section>
-      <div id="body" className="bg-primary text-black font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
+      <div id="body" className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
 
 
       {/* Experience Section */}

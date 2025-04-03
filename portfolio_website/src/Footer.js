@@ -7,7 +7,7 @@ export default function Footer() {
         <footer className="w-full bg-primary text-white px-8 py-6 flex justify-evenly" id="contact-me">
             <div>
             <h3>Let's Connect!</h3>
-            <hr className="w-16 border-white my-4"/>
+            <hr className="w-16 my-4"/>
             <p className="text-md font-light">Feel free to reach out to me on social media or via email.</p>
             </div>
             <div className="flex justify-center items-center space-x-8">
