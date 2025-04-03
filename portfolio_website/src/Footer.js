@@ -4,7 +4,7 @@ import { MdEmail } from 'react-icons/md';
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-secondary text-white px-8 py-6 flex justify-evenly" id="contact-me">
+        <footer className="w-full bg-primary text-white px-8 py-6 flex justify-evenly" id="contact-me">
             <div>
             <h3>Let's Connect!</h3>
             <hr className="w-16 border-white my-4"/>

@@ -16,7 +16,7 @@ const ExperienceCard = ( {title, period, description, isLast }) => {
                       ))}
                     </ul>
                 </div>
-                {!isLast && <hr className="my-4 border-t border-gray-700" />}
+                {!isLast && <hr className="my-4 border-t border-secondary" />}
 
             </Reveal>
         </div>

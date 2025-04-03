@@ -10,7 +10,7 @@ export default function AboutPage () {
 
   return (
     <div className="bg-primary text-black font-sans min-h-screen flex flex-col items-center">
-        <div className="bg-primary text-black font-sans min-h-screen flex flex-col items-center px-6">
+        <div className="bg-primary text-black font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
 
         {/* Hero Section */}
         <section className="text-center h-screen w-full pt-14 flex justify-center items-center align-middle">

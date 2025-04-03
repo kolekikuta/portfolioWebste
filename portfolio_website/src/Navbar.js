@@ -19,8 +19,8 @@ export default function Navbar() {
 
     return (
         <header className="w-full text-center py-3 fixed top-0 left-0 shadow-md z-50 bg-primary flex justify-between items-center content-center px-6">
-        <h2 className="text-xl font-medium text-gray-900 cursor-pointer my-0" onClick={() => handleNavigation('/')}>Kole Kikuta</h2>
-        <ul className="flex justify-center space-x-6 text-lg font-medium text-gray-700 justify-center content-center align-middle">
+        <h2 className="text-xl font-medium cursor-pointer my-0" onClick={() => handleNavigation('/')}>Kole Kikuta</h2>
+        <ul className="flex justify-center space-x-6 text-lg font-medium justify-center content-center align-middle">
             <li onClick={() => handleNavigation('/about')} className="cursor-pointer underline-middle-expand font-normal">About</li>
             <li onClick={() => handleNavigation('/projects')} className="cursor-pointer underline-middle-expand font-normal">Projects</li>
             <li onClick={() => handleResumeOpen()} className="cursor-pointer underline-middle-expand font-normal">Resume</li>

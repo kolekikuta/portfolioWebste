@@ -3,13 +3,21 @@
 @tailwind utilities;
 
 h1 {
-  @apply text-8xl font-bold text-gray-900 mb-6
+  @apply text-8xl font-bold text-primary-text mb-6
 }
 
 h2 {
-  @apply text-6xl font-bold text-gray-900 mb-4
+  @apply text-6xl font-bold text-primary-text mb-4
 }
 
 h3 {
-    @apply text-2xl font-bold text-white
+    @apply text-2xl font-bold text-primary-text
+}
+
+p {
+  @apply text-primary-text
+}
+
+li {
+  @apply text-primary-text
 }

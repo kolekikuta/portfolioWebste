@@ -13,7 +13,7 @@ const Header = ({ title }) => {
     }, [controls, inView]);
 
     return (
-        <div className="text-left mb-8" ref={ref}>
+        <div className="text-left mb-8 overflow-hidden" ref={ref}>
             <div className="overflow-hidden">
                 <motion.div
                     initial="hidden"

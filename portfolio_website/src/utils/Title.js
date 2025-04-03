@@ -29,7 +29,7 @@ const Title = ({h1, p}) => {
             exit={{}}
             transition={{ duration: 0.5, delay: 1 }}
         >
-            <p className="mt-8 text-2xl text-gray-600">{p}</p>
+            <p className="mt-8 text-2xl">{p}</p>
         </motion.div>
         </div>
     )
