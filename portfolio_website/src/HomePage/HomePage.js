@@ -64,19 +64,27 @@ export default function HomePage () {
     }, []);
 
   return (
-    <div className="bg-custom-gradient text-black font-sans min-h-screen flex flex-col items-center">
+    <div className="bg-background font-sans min-h-screen flex flex-col items-center">
       {/* Hero Section */}
       <section id="hero-section" className="text-center flex flex-col h-screen w-full pt-14 justify-center items-center align-middle">
       <Title h1="Hi, my name is Kole" p="I am a software engineer from Long Beach, California specializing in full-stack development."/>
       </section>
       <div id="body" className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
-
+        <Reveal>
+          <div
+          className="w-1/3 h-60 absolute top-1/4 right-20 z-0"
+          style={{
+            backgroundImage: "radial-gradient(rgba(217, 217, 217, 0.5) 1px, transparent 0)",
+            backgroundSize: "20px 20px",
+          }}
+          ></div>
+        </Reveal>
 
       {/* Experience Section */}
-      <section id="experience-section" className="w-full pt-20">
+      <section id="experience-section" className="w-full pt-20 mb-10">
         <Header title="Experience"/>
 
-        <div className="w-full mx-auto text-white">
+        <div className="w-full mx-auto text-white ">
           <ExperienceCard
             title="Systems Support Engineer at Genius Sports"
             period="August 2024 - February 2025"
@@ -108,19 +116,34 @@ export default function HomePage () {
       </section>
 
       {/* Portfolio Grid */}
-      <section id="portfolio-grid" className="pt-14 w-full relative">
+      <section id="portfolio-grid" className="pt-20 mb-10 w-full relative">
         <Header title="Projects"/>
         <Reveal>
           <ProjectCard
-            title="Project Title"
-            description="Description of the project goes here."
-            imgPath="logo512.png"
+            title="UCSB Capstone Project - LeaseMate"
+            description="Developed as a part of UC Santa Barbara's Computer Science Capstone program, LeaseMate is an AI-powered, all-in-one
+            communications platform for property managers and tenants. Leasemate leverages natural language processing to intelligently route
+            tenant inquiries, summarize lease agreements, and track maintenance progress — all in a centralized dashboard."
+            imgPath="leasemate_logo.png"
             imgAlt="Project Logo"
-            skills={["React", "Node.js", "Express"]}
-            ghLink="https://github.com/kolekikuta"
+            skills={["React", "Node.js", "Google Gemini API", "Google Firebase"]}
+            ghLink="https://github.com/CMSC189A-APPFOLIO2/CMSPC189A"
             projectPage='/project'
           />
-
+        </Reveal>
+        <Reveal>
+          <ProjectCard
+            title="NBA Fantasy Value Predictor"
+            description="The goal for this project was to help fantasy basketball players, like myself, make data-driven decisions about trades, pickups, and
+            lineup choices. This project uses real-time data from the NBA API to analyze player performance and forecast future fantasy value.
+            The application collects box score data for individual players, processes recent game stats, and applies a linear regression model to
+            predict upcoming fantasy outputs. "
+            imgPath="logo512.png"
+            imgAlt="Project Logo"
+            skills={["Python", "NBA API", "Pandas", "NumPy"]}
+            ghLink="https://github.com/kolekikuta/fantasyStats"
+            projectPage='/project'
+          />
         </Reveal>
       </section>
       </div>

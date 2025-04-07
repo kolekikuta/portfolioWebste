@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Title = ({h1, p}) => {
     return (
-        <div className="text-left mb-8">
+        <div className="text-left mb-8 overflow-hidden">
             <div className="overflow-hidden">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}

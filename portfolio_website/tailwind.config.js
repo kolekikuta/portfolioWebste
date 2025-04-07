@@ -10,6 +10,7 @@ module.exports = {
         'primary': '#0a0908',
         'secondary': '#c6ac8f',
         'tertiary': '#333533',
+        'background': '#242423',
         'primary-text': '#eae0d5',
         'linkedinBlue': '#0077B5',
       },
@@ -17,8 +18,11 @@ module.exports = {
         'sans': ['Roboto', 'sans-serif'],
       },
       backgroundImage: {
-        'custom-gradient': 'linear-gradient(to right, #242423, #333533)'
-      }
+        'custom-gradient': 'linear-gradient(to right, #242423, #333533)',
+        'footer-gradient': 'linear-gradient(to bottom, #242423 0%, #0a0908 100%)',
+        'navbar-gradient': 'linear-gradient(to bottom, #0a0908 0%, #242423 100%)',
+
+      },
     },
   },
   plugins: [

@@ -26,7 +26,7 @@ const PageTransition = ({ children }) => {
           animate="enter"
           exit="exit"
           variants={slideVariants}
-          className="bg-custom-gradient fixed top-0 left-0 w-full h-screen z-10"
+          className="bg-background fixed top-0 left-0 w-full h-screen z-10"
         />
 
       {/* Page Content */}
