@@ -2,6 +2,7 @@ import React, { useEffect }from "react";
 import { motion } from "framer-motion";
 import Reveal from "../utils/Reveal";
 import Header from "../utils/Header";
+import Dots from "../utils/Dots";
 
 export default function AboutPage () {
 
@@ -15,13 +16,16 @@ export default function AboutPage () {
 
         {/* Hero Section */}
         <section className="text-center h-screen w-full pt-14 flex justify-center items-center align-middle">
+          <Dots classNameStr="w-1/4 h-[30rem] absolute top-1/4 left-20 z-0"/>
           <motion.div
             initial={{ opacity: 0, y: 20, scale: .8, ease: "easeInOut" }}
             animate={{ opacity: 1, y: 0, scale: 1, ease: "easeInOut" }}
             transition={{ duration: 1 }}
+            className="z-10"
             >
               <img src="\portrait.jpg" alt="Kole Kikuta" className="w-96 h-auto rounded-xl mb-4" />
           </motion.div>
+
           <div className="overflow-hidden m-10 text-left w-3/4">
             <Header title="About Me"/>
             <Reveal>

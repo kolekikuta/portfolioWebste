@@ -70,15 +70,16 @@ export default function HomePage () {
       <Title h1="Hi, my name is Kole" p="I am a software engineer from Long Beach, California specializing in full-stack development."/>
       </section>
       <div id="body" className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
-        <Reveal>
-          <div
-          className="w-1/3 h-60 absolute top-1/4 right-20 z-0"
-          style={{
-            backgroundImage: "radial-gradient(rgba(217, 217, 217, 0.5) 1px, transparent 0)",
-            backgroundSize: "20px 20px",
-          }}
-          ></div>
-        </Reveal>
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: .8, ease: "easeInOut" }}
+            animate={{ opacity: 1, y: 0, scale: 1, ease: "easeInOut" }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="w-1/3 h-60 absolute top-1/4 right-20 z-0"
+            style={{
+              backgroundImage: "radial-gradient(rgba(217, 217, 217, 0.5) 1px, transparent 0)",
+              backgroundSize: "20px 20px",
+            }}
+          ></motion.div>
 
       {/* Experience Section */}
       <section id="experience-section" className="w-full pt-20 mb-10">
