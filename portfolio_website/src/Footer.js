@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 export default function Footer() {
+    const navigate = useNavigate();
+
+    const handleNavigation = (path) => {
+        navigate(path);
+    }
+
     return (
         <footer className="w-full bg-footer-gradient text-white px-8 py-6 flex justify-evenly" id="contact-me">
             <div>
@@ -20,6 +27,7 @@ export default function Footer() {
                   <FaGithub className="inline-block" size={40}/>
                 </a>
             </div>
+
         </footer>
     )
 }

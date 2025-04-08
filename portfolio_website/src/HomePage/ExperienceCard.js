@@ -5,7 +5,7 @@ const ExperienceCard = ( {title, period, description, isLast }) => {
     return (
         <div>
             <Reveal>
-                <div className="w-full justify-start p-6 text-start block hover:shadow-lg transition transform duration-300 rounded-xl">
+                <div className="w-full justify-start p-6 text-start block hover:shadow-lg transition transform duration-300 rounded-3xl">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-2xl font-bold">{title}</h3>
                       <p className="text-md font-light italic">{period}</p>
