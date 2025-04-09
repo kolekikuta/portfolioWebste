@@ -18,12 +18,12 @@ const ProjectsPage = () => {
 
     return (
       <div className="bg-background font-sans min-h-screen flex flex-col items-center">
-      <div className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl my-32">
+      <div className="font-sansflex flex-col items-center px-6 max-w-9xl mt-24">
 
       {/* Hero Section */}
-      <section className="text-center h-screen w-full py-14 flex flex-col justify-center items-center align-middle">
+      <section className="text-center w-full flex flex-col justify-center items-center align-middle">
 
-        <div className="overflow-hidden m-10 text-left w-3/4 min-h-48">
+        <div className="overflow-hidden text-left w-3/4 min-h-48">
           <Header title="My Work"/>
           <Reveal>
             <p className="text-lg font-light mb-20 pb-1">I'm super passionate about solving real-world problems through thoughtful design
