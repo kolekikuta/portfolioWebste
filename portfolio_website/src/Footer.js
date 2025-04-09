@@ -17,14 +17,14 @@ export default function Footer() {
             <p className="text-md font-light">Feel free to reach out to me on social media or via email.</p>
             </div>
             <div className="flex justify-center items-center space-x-8">
-                <a href="mailto:kolekikuta@gmail.com" className="block text-white text-xl hover:text-secondary transition">
-                    <MdEmail className="inline-block" size={45}/>
+                <a href="mailto:kolekikuta@gmail.com">
+                    <MdEmail className="inline-block text-primary-text hover:text-secondary transition-colors duration-300" size={45}/>
                 </a>
-                <a href="https://www.linkedin.com/in/kolekikuta/" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-secondary transition-colors duration-300">
-                  <FaLinkedin className="inline-block" size={40}/>
+                <a href="https://www.linkedin.com/in/kolekikuta/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="inline-block text-primary-text hover:text-secondary transition-colors duration-300" size={40}/>
                 </a>
-                <a href="https://github.com/kolekikuta" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-secondary transition-colors duration-300">
-                  <FaGithub className="inline-block" size={40}/>
+                <a href="https://github.com/kolekikuta" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="inline-block text-primary-text hover:text-secondary transition-colors duration-300" size={40}/>
                 </a>
             </div>
         </footer>
