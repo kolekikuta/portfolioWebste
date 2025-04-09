@@ -16,7 +16,7 @@ export default function NBAFantasyPage () {
       <div className="font-sans min-h-screen flex flex-col items-center px-6 max-w-7xl">
 
       {/* Hero Section */}
-      <section className="text-center h-screen w-full pt-14 flex justify-center items-center align-middle">
+      <section className="text-center w-full pt-14 flex justify-center items-center align-middle">
         <div className="relative">
           <Dots classNameStr="w-[22rem] h-[22rem] absolute top-2 right-2 rounded-full z-0"/>
           <motion.div
@@ -35,28 +35,29 @@ export default function NBAFantasyPage () {
             <FaGithub className="inline-block text-primary-text hover:text-secondary transition transform duration-300" size={50}/>
           </a>
           <Reveal>
-            <p className="text-lg font-light mb-4">Hi, I’m a fourth-year Computer Engineering student at UC Santa Barbara, with a strong passion for software
-              development and innovation. I’m especially excited about the future of AI/ML, deep learning, and embedded systems —
-              areas where I see endless potential to solve real-world problems and build smarter, more responsive technology.</p>
+            <p className="text-lg font-light mb-4">As a longtime fantasy basketball player, I’ve always looked for ways to gain an edge — especially when
+              it comes to deciding on trades, waiver pickups, or tricky start/sit choices. But even with so much basketball data available online, it’s
+              tough to translate raw stats into clear, actionable insights for fantasy performance. That’s what inspired me to build the <strong>NBA Fantasy
+              Value Predictor,</strong> a tool that combines real-time NBA data with predictive analytics to help fantasy managers like myself make smarter,
+              faster decisions backed by data.</p>
           </Reveal>
           <Reveal>
-            <p className="text-lg font-light mb-4">My journey into tech has always been driven by curiosity and creativity. Whether it's developing
-              AI-powered tools like Leasemate for my capstone project or building predictive models for NBA fantasy players, I love
-              working on projects that blend data, design, and impact.</p>
+            <p className="text-lg font-light mb-4">The app connects directly to the NBA API, pulling in real-time box score and player stats across recent
+              games. It processes these metrics — such as minutes played, points, rebounds, and assists — to build a profile of each player’s
+              current form and role. Then, using a linear regression model, it forecasts that player’s fantasy value for upcoming matchups based on recent
+              performance and trends. Whether you’re trying to figure out if a hot waiver wire pickup is legit or evaluate the fairness of a trade, the
+              predictor gives a data-backed projection to guide your decision-making.</p>
+            </Reveal>
+          <Reveal>
+            <p className="text-lg font-light mb-4">On the technical side, the application was built using Python for data ingestion, processing, and modeling.
+              I used Pandas for managing and analyzing time-series player data, and scikit-learn to build and train the regression models. Although it currently
+              runs as a standalone script, I plan to build it out into a full-featured web app so that other fantasy basketball players can easily access and
+              use its predictions in real time.</p>
           </Reveal>
           <Reveal>
-            <p className="text-lg font-light mb-4">Outside the classroom, I’m actively involved in the Nikkei Student Union, where I stay connected to
-              my Japanese-American heritage and help create community for other students. I’m also part of Yonsei Basketball, a program
-              that brings together generations of Japanese-American players, and I’ve helped organize youth camps and cultural events
-              that bridge identity and sport.</p>
-          </Reveal>
-          <Reveal>
-            <p className="text-lg font-light mb-4">When I’m not coding or on campus, you’ll probably find me outdoors — snowboarding in the mountains, surfing along the coast,
-              or just soaking up the California sun. I also love playing basketball, hitting the golf course, and spinning music as a DJ
-               — all outlets that keep me energized, inspired, and grounded.</p>
-          </Reveal>
-          <Reveal>
-            <p className="text-lg font-light">I'm always looking for opportunities to grow, collaborate, and contribute to projects with purpose.</p>
+            <p className="text-lg font-light mb-4">This project was a fun intersection of my interests in sports, statistics, and software. It taught me a lot
+              about data modeling and how to turn raw information into something that’s actually useful for people. More importantly, it scratched the itch
+              I’d always had during fantasy season — and now, I rarely make a roster move without consulting my own app first.</p>
           </Reveal>
         </div>
       </section>

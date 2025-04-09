@@ -138,7 +138,7 @@ export default function HomePage () {
             description="The goal for this project was to help fantasy basketball players, like myself, make data-driven decisions about trades, pickups, and
             lineup choices. This project uses real-time data from the NBA API to analyze player performance and forecast future fantasy value.
             The application collects box score data for individual players, processes recent game stats, and applies a linear regression model to
-            predict upcoming fantasy outputs. "
+            predict upcoming fantasy outputs."
             imgPath="nba_predictor_logo2.svg"
             imgAlt="NBA Predictor Logo"
             skills={["Python", "NBA API", "Pandas", "NumPy"]}
