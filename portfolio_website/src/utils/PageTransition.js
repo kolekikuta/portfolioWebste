@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Header from "../Header";
+import Navbar from "../Navbar"
 import Footer from "../Footer";
 
 const PageTransition = ({ children }) => {
@@ -26,7 +26,7 @@ const PageTransition = ({ children }) => {
           animate="enter"
           exit="exit"
           variants={slideVariants}
-          className="bg-primary fixed top-0 left-0 w-full h-screen z-10"
+          className="bg-background fixed top-0 left-0 w-full h-screen z-50"
         />
 
       {/* Page Content */}
@@ -36,7 +36,7 @@ const PageTransition = ({ children }) => {
         exit="exit"
         variants={headerVariants}
         >
-            <Header />
+            <Navbar />
         </motion.div>
 
       {children}

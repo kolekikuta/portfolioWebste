@@ -4,11 +4,15 @@ import { AnimatePresence } from "framer-motion";
 import HomePage from "./HomePage/HomePage";
 import AboutPage from "./AboutPage/AboutPage";
 import ProjectsPage from "./ProjectsPage/ProjectsPage";
+import LeaseMatePage from "./ProjectsPage/LeaseMatePage";
+import NBAFantasyPage from "./ProjectsPage/NBAFantasyPage";
 import PageTransition from "./utils/PageTransition";
+import { useLenis } from "./utils/Lenis"
 import './global.css'
 
 function AnimatedRoutes() {
   const location = useLocation();
+  useLenis();
 
   return (
     <AnimatePresence mode="wait">
@@ -34,6 +38,22 @@ function AnimatedRoutes() {
           element={
             <PageTransition>
               <ProjectsPage />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/leasemate"
+          element={
+            <PageTransition>
+              <LeaseMatePage />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/nbafantasy"
+          element={
+            <PageTransition>
+              <NBAFantasyPage />
             </PageTransition>
           }
         />

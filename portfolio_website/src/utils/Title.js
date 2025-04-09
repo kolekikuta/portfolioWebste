@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Title = ({h1, p}) => {
     return (
-        <div className="text-left mb-8">
+        <div className="text-left mb-8 overflow-hidden">
             <div className="overflow-hidden">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -21,7 +21,7 @@ const Title = ({h1, p}) => {
             exit={{}}
             transition={{ duration: 0.7, ease: "easeInOut" }}
             >
-                <hr className="w-24 border-2 border-secondary my-6"/>
+                <hr className="w-24 border-2 border-secondary my-4"/>
         </motion.div>
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -29,7 +29,7 @@ const Title = ({h1, p}) => {
             exit={{}}
             transition={{ duration: 0.5, delay: 1 }}
         >
-            <p className="mt-8 text-2xl text-gray-600">{p}</p>
+            <p className="mt-8 text-2xl">{p}</p>
         </motion.div>
         </div>
     )

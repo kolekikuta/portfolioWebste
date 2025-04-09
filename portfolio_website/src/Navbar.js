@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Header() {
+export default function Navbar() {
     const navigate = useNavigate();
 
     const handleNavigation = (path) => {
@@ -18,9 +18,9 @@ export default function Header() {
     };
 
     return (
-        <header className="w-full text-center py-3 fixed top-0 left-0 shadow-md z-50 bg-primary flex justify-between items-center content-center px-6">
-        <h2 className="text-xl font-medium text-gray-900 cursor-pointer my-0" onClick={() => handleNavigation('/')}>Kole Kikuta</h2>
-        <ul className="flex justify-center space-x-6 text-lg font-medium text-gray-700 justify-center content-center align-middle">
+        <header className="w-full text-center py-3 fixed top-0 left-0 z-50 bg-navbar-gradient flex justify-between items-center content-center px-6">
+        <h2 className="text-xl font-medium cursor-pointer my-0" onClick={() => handleNavigation('/')}>Kole Kikuta</h2>
+        <ul className="flex justify-center space-x-6 text-lg font-medium justify-center content-center align-middle">
             <li onClick={() => handleNavigation('/about')} className="cursor-pointer underline-middle-expand font-normal">About</li>
             <li onClick={() => handleNavigation('/projects')} className="cursor-pointer underline-middle-expand font-normal">Projects</li>
             <li onClick={() => handleResumeOpen()} className="cursor-pointer underline-middle-expand font-normal">Resume</li>

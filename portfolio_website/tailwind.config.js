@@ -7,13 +7,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#E7D8C9',
-        'secondary': '#59544B',
-        'primary-text': '#0B0033',
+        'primary': '#0a0908',
+        'secondary': '#c6ac8f',
+        'tertiary': '#333533',
+        'background': '#242423',
+        'primary-text': '#eae0d5',
         'linkedinBlue': '#0077B5',
       },
       fontFamily: {
         'sans': ['Roboto', 'sans-serif'],
+      },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(to right, #242423, #333533)',
+        'footer-gradient': 'linear-gradient(to bottom, #242423 0%, #0a0908 100%)',
+        'navbar-gradient': 'linear-gradient(to bottom, #0a0908 0%, #242423 100%)',
+
       },
     },
   },
@@ -31,7 +39,7 @@ module.exports = {
           left: '50%',
           width: '0',
           height: '2px',
-          backgroundColor: theme('colors.black'), // Use black or customize with any color
+          backgroundColor: theme('colors.secondary'),
           transition: 'all 0.2s ease-out',
         },
         '.underline-middle-expand:hover::after': {

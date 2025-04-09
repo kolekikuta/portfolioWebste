@@ -8,6 +8,9 @@ import PageTransition from "../utils/PageTransition";
 import Title from "../utils/Title";
 import { FaGithub } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
+import ExperienceCard from "./ExperienceCard";
+import Header from "../utils/Header"
+import ScrollButton from "../utils/ScrollButton";
 
 export default function HomePage () {
     const [openModalId, setOpenModalID] = useState(null);
@@ -61,121 +64,94 @@ export default function HomePage () {
     }, []);
 
   return (
-    <div className="bg-primary text-black font-sans min-h-screen flex flex-col items-center">
-      <div id="body" className="bg-primary text-black font-sans min-h-screen flex flex-col items-center px-6">
+    <div className="bg-background font-sans min-h-screen flex flex-col items-center">
       {/* Hero Section */}
       <section id="hero-section" className="text-center flex flex-col h-screen w-full pt-14 justify-center items-center align-middle">
       <Title h1="Hi, my name is Kole" p="I am a software engineer from Long Beach, California specializing in full-stack development."/>
-        <Reveal>
-        <button
-          onClick={() => scrollToSection('expeience-section')}
-          className="mt-6 text-white transition"
-        >
-          <span>
-            <ChevronDownIcon className="h-10 w-10 inline-block color-white" />
-          </span>
-        </button>
-        </Reveal>
       </section>
+      <div id="body" className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: .8, ease: "easeInOut" }}
+            animate={{ opacity: 1, y: 0, scale: 1, ease: "easeInOut" }}
+            transition={{ delay: 0.5, duration: 1 }}
+            className="w-1/3 h-60 absolute top-1/4 right-20 z-0"
+            style={{
+              backgroundImage: "radial-gradient(rgba(217, 217, 217, 0.5) 1px, transparent 0)",
+              backgroundSize: "20px 20px",
+            }}
+          ></motion.div>
 
       {/* Experience Section */}
-      <section id="experience-section" className="text-center w-full pt-14">
-        <Reveal>
-          <h1 className="mt-4">Experience</h1>
-          <div className=" w-full mx-auto text-white">
-            {/*Left Aligned*/}
-            <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block mb-4">
-              <h2 className="text-2xl font-bold mb-1">Systems Support Engineer at Genius Sports</h2>
-              <p className="text-md font-light italic mb-2">August 2024 - February 2025</p>
-              <ul className="list-disc list-inside text-md text-gray-200">
-                <li>Supported cross-functional teams in identifying system improvements and resolving technical issues across a broad tech stack</li>
-                <li>Managed systems administration and real-time troubleshooting of hardware/software systems using Grafana custom alerts/dashboards with PromQL</li>
-                <li>Troubleshooted issues in AWS EC2 and S3 cloud computing environments</li>
-              </ul>
-            </div>
+      <section id="experience-section" className="w-full pt-20 mb-10">
+        <Header title="Experience"/>
 
-            {/*Right Aligned*/}
-            <div className="w-full flex justify-end">
-              <div className="max-w-xl text-white p-6 rounded-lg shadow-md text-left bg-secondary mb-4">
-                <h2 className="text-2xl font-bold mb-2">Web Development Intern at Terasaki Budokan</h2>
-                <p className="text-md mb-4">June 2024 - September 2024</p>
-                <ul className="list-disc list-inside text-md text-gray-200 text-start">
-                  <li>Responsible for website rebuild for elevated user experience and increased engagement using front-end programming languages, including HTML and CSS</li>
-                  <li>Collaborated with management and user test groups to identify UI/UX improvements that resulted in a 500% increase in web traffic</li>
-                </ul>
-              </div>
-            </div>
-
-            {/*Left Aligned*/}
-            <div className="max-w-xl w-full justify-start bg-secondary text-white p-6 rounded-lg shadow-md text-start block mb-4">
-              <h2 className="text-2xl font-bold mb-1">Information Technology Intern at UCSB Kavli Institute for Theoretical Physics</h2>
-              <p className="text-md font-light italic mb-2">October 2022 - Present</p>
-              <ul className="list-disc list-inside text-md text-gray-200">
-                <li>Responsible for installing, maintaining, and repairing hardware and software components of network, server, and computer systems</li>
-                <li>Responsible for troubleshooting and resolving computer, network, and printing issues for staff of 40+ members</li>
-                <li>Operated Audio-Visual systems for internationally broadcasted conventions and discussions</li>
-              </ul>
-            </div>
-
-          </div>
-        </Reveal>
+        <div className="w-full mx-auto text-white ">
+          <ExperienceCard
+            title="Systems Support Engineer at Genius Sports"
+            period="August 2024 - February 2025"
+            description={[
+              "Supported cross-functional teams in identifying system improvements and resolving technical issues across a broad tech stack",
+              "Managed systems administration and real-time troubleshooting of hardware/software systems using Grafana custom alerts/dashboards with PromQL",
+              "Troubleshooted issues in AWS EC2 and S3 cloud computing environments"
+            ]}
+          />
+          <ExperienceCard
+            title="Web Development Intern at Terasaki Budokan"
+            period="June 2024 - September 2024"
+            description={[
+              "Responsible for website rebuild for elevated user experience and increased engagement using front-end programming languages, including HTML and CSSk",
+              "Collaborated with management and user test groups to identify UI/UX improvements that resulted in a 500% increase in web traffic"
+            ]}
+          />
+          <ExperienceCard
+            title="Information Technology Intern at UCSB Kavli Institute for Theoretical Physics"
+            period="October 2022 - Present"
+            description={[
+              "Responsible for installing, maintaining, and repairing hardware and software components of network, server, and computer systems",
+              "Responsible for troubleshooting and resolving computer, network, and printing issues for staff of 40+ members",
+              "Operated Audio-Visual systems for internationally broadcasted conventions and discussions"
+            ]}
+            isLast={true}
+          />
+        </div>
       </section>
 
       {/* Portfolio Grid */}
-      <section id="portfolio-grid" className="pt-14 w-full max-w-5xl relative">
-        <Reveal>
-        <div className="flex justify-center items-center align-middle w-full my-5 text-white rounded-lg px-6 cursor-pointer hover-translate-y" onClick={() => openModalByID("Modal1")}>
-          <div className="w-1/4 text-white rounded-lg">
-            <img src="logo512.png" alt="Project Logo" className="w-full h-auto rounded-lg mb-4 cursor-pointer"/>
-          </div>
-          <div className="w-3/4 h-full bg-primary-text text-white p-6 rounded-lg shadow-md ml-4 relative">
-            <h2 className="text-2xl font-bold mb-2">Project 1</h2>
-            <p>Descripton of project</p>
-            <a href="https://github.com/kolekikuta" target="_blank" rel="noopener noreferrer" className="absolute top-6 right-6 text-white hover:text-secondary transition-colors duration-300">
-                  <FaGithub className="inline-block" size={40}/>
-                </a>
-            <ul className="flex space-x-4 mt-4">
-              <li className="bg-white rounded-full font-bold px-2 text-primary-text">React</li>
-              <li className="bg-white rounded-full font-bold px-2 text-primary-text">Node.js</li>
-              <li className="bg-white rounded-full font-bold px-2 text-primary-text">Express</li>
-            </ul>
-          </div>
-        </div>
-        </Reveal>
-
-        <Modal id="Modal1" isOpen={openModalId === "Modal1"} closeModal={closeModal}>
-          <h2 className="text-2xl font-bold mb-4">Project Details</h2>
-          <p>This is where you can add more details about the project, such as features, technologies used, challenges faced, etc.</p>
-        </Modal>
+      <section id="portfolio-grid" className="pt-20 mb-10 w-full relative">
+        <Header title="Projects"/>
         <Reveal>
           <ProjectCard
-            title="Project Title"
-            description="Description of the project goes here."
-            imgPath="logo512.png"
-            imgAlt="Project Logo"
-            skills={["React", "Node.js", "Express"]}
-            ghLink="https://github.com/kolekikuta"
-            projectPage='/project'
+            title="UCSB Capstone Project - LeaseMate"
+            description="Developed as a part of UC Santa Barbara's Computer Science Capstone program, LeaseMate is an AI-powered, all-in-one
+            communications platform for property managers and tenants. Leasemate leverages natural language processing to intelligently route
+            tenant inquiries, summarize lease agreements, and track maintenance progress — all in a centralized dashboard."
+            imgPath="leasemate_logo.svg"
+            imgAlt="LeaseMate Logo"
+            skills={["React", "Node.js", "Google Gemini API", "Google Firebase"]}
+            ghLink="https://github.com/CMSC189A-APPFOLIO2/CMSPC189A"
+            projectPage='/leasemate'
+          />
+        </Reveal>
+        <Reveal>
+          <ProjectCard
+            title="NBA Fantasy Value Predictor"
+            description="The goal for this project was to help fantasy basketball players, like myself, make data-driven decisions about trades, pickups, and
+            lineup choices. This project uses real-time data from the NBA API to analyze player performance and forecast future fantasy value.
+            The application collects box score data for individual players, processes recent game stats, and applies a linear regression model to
+            predict upcoming fantasy outputs. "
+            imgPath="nba_predictor_logo2.svg"
+            imgAlt="NBA Predictor Logo"
+            skills={["Python", "NBA API", "Pandas", "NumPy"]}
+            ghLink="https://github.com/kolekikuta/fantasyStats"
+            projectPage='/nbafantasy'
           />
         </Reveal>
       </section>
       </div>
 
-      {/* Scroll to Top Button */}
-      <AnimatePresence>
-      {showScrollButton && (
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 , transition: { duration: 0.3 }}}
-          exit={{ opacity: 0, transition: { duration: 0.3 }}}
-          className="fixed bottom-4 right-4 text-white p-3"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <ChevronUpIcon className="h-10 w-10" />
-        </motion.button>
-      )}
-      </AnimatePresence>
 
+
+      <ScrollButton/>
     </div>
   );
 }
