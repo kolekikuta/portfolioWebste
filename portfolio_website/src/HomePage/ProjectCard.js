@@ -15,7 +15,7 @@ const ProjectCard = ({ title, description, imgPath, imgAlt, skills, ghLink, proj
             <div className="w-1/4 rounded-lg p-6">
               <img src={imgPath} alt={imgAlt} className="w-full h-auto rounded-lg cursor-pointer"/>
             </div>
-            <div className="w-3/4 h-full p-6 relative">
+            <div className="w-3/4 h-full p-6 relative text-left">
               <h3 className="text-2xl font-bold mb-2">{title}</h3>
               <p className="font-light max-w-3xl">{description}</p>
               <a href={ghLink} target="_blank" rel="noopener noreferrer" className="absolute top-4 right-6 hover:text-secondary transition-colors duration-300">
