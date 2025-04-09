@@ -18,7 +18,7 @@ export default function LeaseMatePage () {
       <div className="font-sans min-h-screen flex flex-col items-center px-6 max-w-7xl">
 
       {/* Hero Section */}
-      <section className="text-center h-screen w-full pt-14 flex justify-center items-center align-middle">
+      <section className="text-center w-full pt-14 flex justify-center items-center align-middle">
         <div className="relative">
 
           <motion.div
@@ -39,28 +39,25 @@ export default function LeaseMatePage () {
             <FaGithub className="inline-block text-primary-text hover:text-secondary transition transform duration-300" size={50}/>
           </a>
           <Reveal>
-            <p className="text-lg font-light mb-4">Hi, I’m a fourth-year Computer Engineering student at UC Santa Barbara, with a strong passion for software
-              development and innovation. I’m especially excited about the future of AI/ML, deep learning, and embedded systems —
-              areas where I see endless potential to solve real-world problems and build smarter, more responsive technology.</p>
+            <p className="text-lg font-light mb-4">LeaseMate was born out of a shared frustration among students and young renters navigating the complexities
+              of lease agreements. As college students renting apartments for the first time, my team and I experienced firsthand how challenging it can be
+              to understand legal jargon, track responsibilities, and manage payments. We realized there was a significant gap in accessible, tech-driven
+              tools to empower renters with clarity and confidence. Developed as a part of the UCSB Computer Science Capstone Program, with collaboration from
+              our industry mentors at Appfolio, we create LeaseMate — a smart lease companion app designed to make renting fair, understandable, and organized.</p>
           </Reveal>
           <Reveal>
-            <p className="text-lg font-light mb-4">My journey into tech has always been driven by curiosity and creativity. Whether it's developing
-              AI-powered tools like Leasemate for my capstone project or building predictive models for NBA fantasy players, I love
-              working on projects that blend data, design, and impact.</p>
+            <p className="text-lg font-light mb-4">LeaseMate serves as a central platform for renters to upload and interact with their lease agreements
+              using AI-powered tools. We leveraged natural language processing (NLP) to intelligently extract and highlight critical terms such as rent
+              amounts, due dates, penalties, and tenant responsibilities. LeaseMate features a chatbot-style interface that allows users to ask questions
+              about their renting policies and receive instant, accurate answers from their lease document. On top of that, we built a smart maintenance
+              request system that allows users to log issues using simple natural language, which the app then classifies and prioritizes for tracking.
+              By combining AI with a user-friendly interface, we made lease management and maintenance communication clearer, faster, and more transparent for renters.</p>
           </Reveal>
           <Reveal>
-            <p className="text-lg font-light mb-4">Outside the classroom, I’m actively involved in the Nikkei Student Union, where I stay connected to
-              my Japanese-American heritage and help create community for other students. I’m also part of Yonsei Basketball, a program
-              that brings together generations of Japanese-American players, and I’ve helped organize youth camps and cultural events
-              that bridge identity and sport.</p>
-          </Reveal>
-          <Reveal>
-            <p className="text-lg font-light mb-4">When I’m not coding or on campus, you’ll probably find me outdoors — snowboarding in the mountains, surfing along the coast,
-              or just soaking up the California sun. I also love playing basketball, hitting the golf course, and spinning music as a DJ
-               — all outlets that keep me energized, inspired, and grounded.</p>
-          </Reveal>
-          <Reveal>
-            <p className="text-lg font-light">I'm always looking for opportunities to grow, collaborate, and contribute to projects with purpose.</p>
+            <p className="text-lg font-light mb-4">From a technical standpoint, LeaseMate was built as a full-stack application. The front end is designed using
+              React.js for a clean and intuitive user experience, while the back end is powered by Node.js and Express, with Google Firebase as our primary database
+              to store user data and lease documents. For document processing and data extraction, we implemented Optical Character Recognition (OCR) using Tesseract.js.
+              Our AI-powered features were developed using the Google Gemini API, which allowed us to leverage advanced NLP capabilities for document understanding and user interaction.</p>
           </Reveal>
         </div>
       </section>
