@@ -21,7 +21,7 @@ const ProjectsPage = () => {
       <div className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl my-32">
 
       {/* Hero Section */}
-      <section className="text-center h-screen w-full pt-14 flex flex-col justify-center items-center align-middle">
+      <section className="text-center h-screen w-full py-14 flex flex-col justify-center items-center align-middle">
 
         <div className="overflow-hidden m-10 text-left w-3/4 min-h-48">
           <Header title="My Work"/>

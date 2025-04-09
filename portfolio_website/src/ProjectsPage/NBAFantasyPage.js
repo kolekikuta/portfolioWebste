@@ -30,7 +30,7 @@ export default function NBAFantasyPage () {
         </div>
 
         <div className="overflow-hidden m-10 text-left w-3/4 relative">
-          <Header title="NBA Fantasy Value Predictor"/>
+          <Header title="NBA Fantasy Predictor"/>
           <a href="https://github.com/kolekikuta/fantasyStats" target="_blank" rel="noopener noreferrer" className="absolute top-2 right-6 hover:text-secondary transition-colors duration-300">
             <FaGithub className="inline-block text-primary-text hover:text-secondary transition transform duration-300" size={50}/>
           </a>
