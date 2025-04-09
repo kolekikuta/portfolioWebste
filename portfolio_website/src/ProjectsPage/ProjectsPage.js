@@ -21,15 +21,16 @@ const ProjectsPage = () => {
       <div className="font-sans min-h-screen flex flex-col items-center px-6 max-w-9xl my-32">
 
       {/* Hero Section */}
-      <section className="text-center h-screen w-full pt-14 flex justify-center items-center align-middle">
+      <section className="text-center h-screen w-full pt-14 flex flex-col justify-center items-center align-middle">
 
-        <div className="overflow-hidden m-10 text-left w-3/4">
+        <div className="overflow-hidden m-10 text-left w-3/4 min-h-48">
           <Header title="My Work"/>
           <Reveal>
-            <p className="text-lg font-light mb-20">I'm super passionate about solving real-world problems through thoughtful design
+            <p className="text-lg font-light mb-20 pb-1">I'm super passionate about solving real-world problems through thoughtful design
               and creative code. I love bringing ideas to life and building projects that make an impact. Click on any project card
               to dive deeper and learn more about what I’ve been working on!</p>
           </Reveal>
+        </div>
           <Reveal>
           <ProjectCard
             title="UCSB Capstone Project - LeaseMate"
@@ -58,7 +59,6 @@ const ProjectsPage = () => {
           />
         </Reveal>
 
-        </div>
       </section>
       </div>
   </div>
