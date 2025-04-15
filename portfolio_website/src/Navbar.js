@@ -31,7 +31,7 @@ export default function Navbar() {
         <ul className="flex justify-center space-x-6 text-lg font-medium justify-center content-center align-middle">
             <li onClick={() => handleNavigation('/about')} className="cursor-pointer underline-middle-expand font-normal">About</li>
             <li onClick={() => handleNavigation('/projects')} className="cursor-pointer underline-middle-expand font-normal">Projects</li>
-            <li onClick={() => handleContact()} className="cursor-pointer underline-middle-expand font-normal">Contact</li>
+            <li onClick={() => handleNavigation('/contact')} className="cursor-pointer underline-middle-expand font-normal">Contact</li>
             <li onClick={() => handleResumeOpen()} className="cursor-pointer underline-middle-expand font-normal">Resume</li>
         </ul>
       </header>
