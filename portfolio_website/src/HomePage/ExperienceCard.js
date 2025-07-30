@@ -1,7 +1,7 @@
 import React from 'react';
 import Reveal from "../utils/Reveal";
 
-const ExperienceCard = ( {title, period, description, isLast }) => {
+const ExperienceCard = ( {title, period, stack, description, isLast }) => {
     return (
         <div>
             <Reveal>
@@ -10,6 +10,7 @@ const ExperienceCard = ( {title, period, description, isLast }) => {
                       <h3 className="text-2xl font-bold">{title}</h3>
                       <p className="text-md font-light italic">{period}</p>
                     </div>
+                    <p className="txt-lg font-light mb-2">{stack}</p>
                     <ul className="list-disc list-inside text-md text-gray-200 font-light">
                       {description.map((desc, index) => (
                         <li key={index} className="mb-2">{desc}</li>
