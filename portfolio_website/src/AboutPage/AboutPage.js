@@ -24,14 +24,14 @@ export default function AboutPage () {
               transition={{ duration: 1 }}
               className="z-10 relative"
               >
-                <img src="\portrait.jpg" alt="Kole Kikuta" className="w-96 h-auto rounded-xl mb-4" />
+                <img src="/images/portrait.jpg" alt="Kole Kikuta" className="w-96 h-auto rounded-xl mb-4" />
             </motion.div>
           </div>
 
           <div className="overflow-hidden m-10 text-left w-3/4">
             <Header title="About Me"/>
             <Reveal>
-              <p className="text-lg font-light mb-4">Hi, I’m a fourth-year <strong>Computer Engineering</strong> student at UC Santa Barbara, with a strong passion for software
+              <p className="text-lg font-light mb-4">Hi, I’m a <strong>Computer Engineering</strong> graduate from UC Santa Barbara, with a strong passion for software
                 development and innovation. I’m especially excited about the future of AI and Machine Learning —
                 areas where I see endless potential to solve real-world problems and build smarter, more responsive technology.</p>
             </Reveal>
@@ -42,7 +42,7 @@ export default function AboutPage () {
             </Reveal>
             <Reveal>
               <p className="text-lg font-light mb-4">Outside the classroom, I’m actively involved in the Nikkei Student Union, where I stay connected to
-                my Japanese-American heritage and help create community for other students. </p>
+                my Japanese-American heritage and help create community for other students.</p>
             </Reveal>
             <Reveal>
               <p className="text-lg font-light mb-4">When I’m not coding or on campus, you’ll probably find me outdoors — snowboarding in the mountains, surfing along the coast,
