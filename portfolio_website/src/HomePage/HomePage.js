@@ -139,7 +139,7 @@ export default function HomePage () {
               description="Developed as a part of UC Santa Barbara's Computer Science Capstone program, LeaseMate is an AI-powered, all-in-one
               communications platform for property managers and tenants. Leasemate leverages natural language processing to intelligently route
               tenant inquiries, summarize lease agreements, and track maintenance progress — all in a centralized dashboard."
-              imgPath="leasemate_logo.svg"
+              imgPath="/images/leasemate_logo.svg"
               imgAlt="LeaseMate Logo"
               skills={["React", "Node.js", "Google Gemini API", "Google Firebase"]}
               ghLink="https://github.com/CMSC189A-APPFOLIO2/CMSPC189A"
@@ -153,7 +153,7 @@ export default function HomePage () {
               lineup choices. This project uses real-time data from the NBA API to analyze player performance and forecast future fantasy value.
               The application collects box score data for individual players, processes recent game stats, and applies a linear regression model to
               predict upcoming fantasy outputs. "
-              imgPath="nba_predictor_logo2.svg"
+              imgPath="/images/nba_predictor_logo2.svg"
               imgAlt="NBA Predictor Logo"
               skills={["Python", "NBA API", "Pandas", "NumPy"]}
               ghLink="https://github.com/kolekikuta/fantasyStats"

@@ -24,7 +24,7 @@ export default function AboutPage () {
               transition={{ duration: 1 }}
               className="z-10 relative"
               >
-                <img src="\portrait.jpg" alt="Kole Kikuta" className="w-96 h-auto rounded-xl mb-4" />
+                <img src="/images/portrait.jpg" alt="Kole Kikuta" className="w-96 h-auto rounded-xl mb-4" />
             </motion.div>
           </div>
 
