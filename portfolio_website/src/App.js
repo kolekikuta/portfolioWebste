@@ -7,6 +7,7 @@ import ProjectsPage from "./ProjectsPage/ProjectsPage";
 import LeaseMatePage from "./ProjectsPage/LeaseMatePage";
 import NBAFantasyPage from "./ProjectsPage/NBAFantasyPage";
 import PageTransition from "./utils/PageTransition";
+import ContactPage from "./ContactPage/ContactPage";
 import { useLenis } from "./utils/Lenis"
 import './global.css'
 
@@ -54,6 +55,14 @@ function AnimatedRoutes() {
           element={
             <PageTransition>
               <NBAFantasyPage />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <PageTransition>
+              <ContactPage />
             </PageTransition>
           }
         />
